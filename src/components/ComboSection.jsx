@@ -41,20 +41,20 @@ const ComboSection = () => {
         Dubai Dhow Cruise Combo Packages
         </h1>
         <div className="flex justify-center pt-5 pb-5">
-          <p className=" text-center w-2/3">
+          <p className=" text-center lg: md:w-2/3 w-full">
           Save up to 40% when you Book Dhow Cruise Dubai with any other tour. We provide Desert Safari, Dubai City Tours, Waterparks tickets, Theme Parks tickets, Shopping tours, and much more. Also, you can avail of free pick and drop (hotel transfer) when booking a Marina cruise dinner with Desert Safari. You can select your own dates, time and even discuss with us to make a complete excursion plan for you. Our dedicated guest-care team will guide you through the process.
           </p>
         </div>
       </div>{/* Add padding for different screen sizes */}
-      <div className="w-full max-w-6xl"> {/* Limit the max width for responsiveness */}
+      <div className="w-full max-w-6xl mb-10 mt-10"> {/* Limit the max width for responsiveness */}
         
         {/* Button row */}
-        <div className="flex justify-center mt-5 mb-10"> {/* Flex-wrap for responsiveness */}
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10 sm:gap-5">{/* Flex-wrap for responsiveness */}
           {data.map((item, index) => (
-            <div key={index} className=" gap-5 w-2/3 "> {/* Full width on small screens */}
+            <div key={index} className=" gap-5 w-full"> {/* Full width on small screens */}
               <button
                 onClick={() => setVisibleIndex(visibleIndex === index ? null : index)}
-                className="font-bold text-2xl text-gray-700 active:text-orange-400 text-center w-full"
+                className="font-bold text-sm lg:text-xl md:text-xl  text-gray-700 active:text-orange-400 text-center "
               >
                 {item.icon}
                 {item.heading}

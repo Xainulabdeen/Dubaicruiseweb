@@ -2,6 +2,7 @@ import React from 'react';
 import Heroscroll from '../components/Heroscroll';
 
 const Hero = () => {
+  
   return (
     <section className="text-gray-600 body-font overflow-hidden container mx-auto px-5 py-10">
       
@@ -26,8 +27,8 @@ const Hero = () => {
           </p>
         </div>
 
-        {/* Hero Scroll Component */}
-        <div className="w-full">
+        {/* Hero Scroll Component - Hidden on small screens */}
+        <div className="w-full hidden lg:block">
           <Heroscroll />
         </div>
 

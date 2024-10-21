@@ -52,7 +52,7 @@ const FlipsSection = () => {
           Quick Info for Booking Dhow Cruise
         </h1>
         <div className="flex justify-center mt-10 mb-10">
-          <p className="w-1/2 text-center ">
+          <p className="w-2/3 text-center ">
             Selecting a specific Dhow Cruise Trip depends on a few factors, which include price, location, food menu, and attractions, sightseeing (landmarks) of the excursion. Check below for details:
           </p>
         </div>

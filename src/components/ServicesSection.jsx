@@ -36,13 +36,13 @@ const IconSection = () => {
 
   return (
     <section className="flex flex-col self-center overflow-hidden ">
-      <div className=" mx-auto flex flex-wrap justify-center gap-20 pb-10">
+      <div className=" flex flex-wrap justify-center gap-20 pb-10">
         {icons.map((icon, index) => (
           <div
             key={index}
-            className="flex flex-col items-center transition-transform transform hover:scale-110 duration-300 ease-in-out"
+            className="flex flex-col items-center  transition-transform transform hover:scale-110 duration-300 ease-in-out"
           >
-            <figure className="w-20 gap-3  mb-4 overflow-hidden">
+            <figure className="lg:w-20 w-10 gap-3  mb-4 overflow-hidden">
               <img
                 loading="lazy"
                 decoding="async"

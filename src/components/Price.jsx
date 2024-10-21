@@ -72,12 +72,15 @@ const Price = () => {
           <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium mb-4">
             Compare Which Dinner is Best For You?
           </h1>
-          <p className="w-2/3 mx-auto text-sm sm:text-base lg:text-lg text-gray-600">
+          <div className="flex justify-center">
+             <p className="w-2/3 text-sm sm:text-base lg:text-lg text-gray-600">
             Dinner Cruises in Dubai operate from three locations. Each service
             has its own specialty. We can compare them based on price, location
             of cruising, ship type (wooden dhow / modern yacht), food menu,
             views of location, and quality of service.
           </p>
+          </div>
+         
         </div>
 
         {/* Responsive Price cards grid layout */}

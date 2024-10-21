@@ -190,18 +190,18 @@ const Blogpage = ({
   const handleToggle3 = () => setShowAnswer3(!showAnswer3);
 
   return (
-    <section className="flex flex-col self-center overflow-hidden container mx-auto px-5 py-10">
+    <section className="flex flex-col self-center overflow-hidden container  px-5 py-10 sm:px-10">
       {/* section1 */}
-      <div className="flex ml-10 mt-10 ">
+      <div className="flex mt-10 ">
         <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl  lg:text-5xl title-font font-medium mb-4">
           {title}
         </h1>
       </div>
       <div>
-        <div className="flex ml-10 "> {subtitle}</div>
+        <div className="overflow-hidden   py-5"> {subtitle}</div>
       </div>
       <div>
-        <div className="flex py-2 ml-10 text-sm sm:text-lg px-1">{rating}</div>
+        <div className="flex py-2 text-sm sm:text-lg px-1">{rating}</div>
       </div>
       <div>
         <Heroscroll />
@@ -251,27 +251,26 @@ const Blogpage = ({
           <div className="self-center">{logo6txt}</div>
         </div>
       </div>
-      section3
-      <div>
-        <div className="flex ml-10 mt-10 ">
+          <div>
+        <div className="flex  mt-10 ">
           <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl  lg:text-3xl title-font font-medium mb-4">
             {h1}
           </h1>
         </div>
-        <div className="flex ml-10 ">{p1}</div>
+        <div className="flex  ">{p1}</div>
       </div>
-      se4 {/* //faqs */}
+     {/* //faqs */}
       <div>
-        <div className="flex ml-10 mt-10">
+        <div className="flex mt-10">
           <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-3xl title-font font-medium mb-4">
             {h2}
           </h1>
         </div>
-        <div className="flex ml-10">{p2}</div>
+        <div className="flex">{p2}</div>
 
         <div className="">
           {/* Question 1 */}
-          <div className="flex flex-col ml-10 mt-10 mb-5 p-3 border-2">
+          <div className="flex flex-col p-3 border-b-2">
             <h1
               className="text-gray-900 text-2xl sm:text-3xl md:text-1xl lg:text-2xl title-font font-medium mb-4 cursor-pointer"
               onClick={handleToggle1} // Toggle on click
@@ -282,7 +281,7 @@ const Blogpage = ({
             {/* Show answer if true */}
           </div>
           {/* Question 2 */}
-          <div className="flex flex-col ml-10 mt-10 mb-5 p-3 border-2">
+          <div className="flex flex-col  p-3 border-b-2">
             <h1
               className="text-gray-900 text-2xl sm:text-3xl md:text-1xl lg:text-2xl title-font font-medium mb-4 cursor-pointer"
               onClick={handleToggle2} // Toggle on click
@@ -293,7 +292,7 @@ const Blogpage = ({
             {/* Show answer if true */}
           </div>
           {/* Question 3 */}
-          <div className="flex flex-col ml-10 mt-10 mb-5 p-3 border-2">
+          <div className="flex flex-col p-3 border-b-2">
             <h1
               className="text-gray-900 text-2xl sm:text-3xl md:text-1xl lg:text-2xl title-font font-medium mb-4 cursor-pointer"
               onClick={handleToggle3} // Toggle on click
@@ -305,8 +304,8 @@ const Blogpage = ({
           </div>
         </div>
       </div>
-      sec5 {/* one img and text block  */}
-      <div className="ml-5 sm:ml-10 mt-10">
+     {/* one img and text block  */}
+      <div className=" mt-10">
         <div className="flex flex-col md:flex-row ">
           <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-3xl title-font font-medium mb-4">
             {h3}
@@ -325,9 +324,9 @@ const Blogpage = ({
           </div>
         </div>
       </div>
-      sec6
+    
       {/* overview of dubai canal  */}
-      <div className="ml-10 mt-10">
+      <div className="   mt-10">
         <div>
           <div className="flex ">
             <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl  lg:text-3xl title-font font-medium mb-4">
@@ -335,26 +334,26 @@ const Blogpage = ({
             </h1>
           </div>
           <div className=" ">{p4}</div>
-          <div className="flex lg:flex-row flex-wrap ml-10 justify-center   m-5">
-            <div className="flex self-center p-3  m-3 border-2 rounded-lg ">
+          <div className="flex lg:flex-row flex-wrap gap-5 m-5 justify-center">
+            <div className="flex self-center gap-5 p-5 border-2 rounded-lg ">
               <div className="flex self-center ">
                 <img src={logo7} alt="" srcset="" className="w-10" />
               </div>
               <div className=" self-center">{logo7txt}</div>
             </div>
-            <div className="flex self-center  p-3 m-3 border-2 rounded-lg ">
+            <div className="flex self-center gap-5 p-5 border-2 rounded-lg ">
               <div className="flex self-center">
                 <img src={logo8} alt="" srcset="" className="w-10" />
               </div>
               <div className=" self-center">{logo8txt}</div>
             </div>
-            <div className="flex self-center  p-3 m-3 border-2 rounded-lg ">
+            <div className="flex self-center gap-5 p-5 border-2 rounded-lg ">
               <div className="flex self-center">
                 <img src={logo9} alt="" srcset="" className="w-10" />
               </div>
               <div className=" self-center">{logo9txt}</div>
             </div>
-            <div className="flex self-center px-6 p-3 m-3 border-2 rounded-lg ">
+            <div className="flex self-center gap-5 p-5 border-2 rounded-lg ">
               <div className="flex self-center">
                 <img src={logo10} alt="" srcset="" className="w-10" />
               </div>
@@ -364,7 +363,7 @@ const Blogpage = ({
           <div>{logosub}</div>
         </div>
       </div>
-      sec7
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
   <div className="mt-5 mb-10 text-center">
     <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-3xl title-font font-medium mb-4">
@@ -408,8 +407,8 @@ const Blogpage = ({
 </div>
 
 
-      sec8
-      <div className=" ml-10 mt-10 mb-5">
+
+      <div className=" mt-10 mb-5">
        
         <div className="flex">
           <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl  lg:text-3xl title-font font-medium mb-4">
@@ -464,9 +463,9 @@ const Blogpage = ({
         </div>
     
       </div>
-      sec9
+   
       {/* menu */}
-      <div className="ml-4 sm:ml-10 mt-6 sm:mt-10">
+      <div className="mt-6 sm:mt-10">
   <div>
     <h1 className="text-gray-900 text-xl sm:text-2xl md:text-3xl lg:text-4xl title-font font-medium mb-4">
       {h6}
@@ -531,8 +530,8 @@ const Blogpage = ({
   </div>
 </div>
 
-      sec10
-      <div className="ml-10 border-2 pb-10">
+
+      <div className="  pb-10">
   <div>
     {/* Header Section */}
     <div className="mt-10">
@@ -548,18 +547,18 @@ const Blogpage = ({
       <div className="flex flex-col lg:flex-row gap-10 mt-10">
         {/* Text Content */}
         <div className="flex flex-col justify-start w-full lg:w-1/2">
-          <div className="flex ml-5 sm:ml-10 mt-5 text-lg font-semibold">
+          <div className="flex  mt-5 text-lg font-semibold">
             {p7t1}
           </div>
-          <div className="flex ml-5 sm:ml-10 mt-5">{p7t1sub}</div>
-          <div className="flex ml-5 sm:ml-10 mt-5 text-lg font-semibold">
+          <div className="flex  mt-5">{p7t1sub}</div>
+          <div className="flex  mt-5 text-lg font-semibold">
             {p7t2}
           </div>
-          <div className="flex ml-5 sm:ml-10 mt-5">{p7t2sub}</div>
-          <div className="flex ml-5 sm:ml-10 mt-5 text-lg font-semibold">
+          <div className="flex  mt-5">{p7t2sub}</div>
+          <div className="flex  mt-5 text-lg font-semibold">
             {p7t3}
           </div>
-          <div className="flex ml-5 sm:ml-10 mt-5">{p7t3sub}</div>
+          <div className="flex mt-5">{p7t3sub}</div>
         </div>
 
         {/* Image */}
@@ -571,7 +570,7 @@ const Blogpage = ({
   </div>
 
   {/* Second Section */}
-  <div className="p-5 ml-5 sm:ml-10 mt-10 border-2">
+  <div className="p-5  mt-10 border-2">
     <div>
       <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-3xl title-font font-medium mb-4">
         {h8}
@@ -581,8 +580,8 @@ const Blogpage = ({
   </div>
 </div>
 
-      sec11
-      <div className="ml-10 mt-10">
+
+      <div className=" mt-10">
   <div>
     <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-3xl title-font font-medium mb-4">
       {h9}
@@ -711,7 +710,7 @@ const Blogpage = ({
 </div>
 
       sec12
-      <div className="ml-10 mt-10">
+      <div className=" mt-10">
   <div>
     <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-3xl title-font font-medium mb-4">
       {h10}
@@ -745,7 +744,7 @@ const Blogpage = ({
 </div>
 
       sec13
-      <div className="ml-10 mt-10">
+      <div className=" mt-10">
   <div className="flex">
     <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-3xl title-font font-medium mb-4">
       {h11}
@@ -800,7 +799,7 @@ const Blogpage = ({
 </div>
 
       sec14
-      <div className="ml-10 mt-10">
+      <div className=" mt-10">
   <div className="flex">
     <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-3xl title-font font-medium mb-4">
       {h12}

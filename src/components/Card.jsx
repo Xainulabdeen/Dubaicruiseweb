@@ -18,12 +18,12 @@ const CruiseCard = ({ imageSrc, title, subHeadings, content, price, discountPric
         {/* Middle section - Content */}
         <div className="m-5 p-5 w-full lg:w-1/2 border-r-2">
           <h2 className="text-xl md:text-2xl font-semibold mb-2">{title}</h2>
-          <div className="flex border-b">
+          <div className="flex border-b overflow-x-scroll">
             {subHeadings.map((sub, index) => (
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
-                className={`py-2 px-2 ${
+                className={`py-5 px-5 gap-5  ${
                   activeTab === index ? 'border-orange-500 border-b-2 text-orange-600' : ''
                 } hover:text-orange-600`}
               >
@@ -51,7 +51,7 @@ const CruiseCard = ({ imageSrc, title, subHeadings, content, price, discountPric
             </button>
             <div className="mt-5 w-full">
               {features.map((feature, index) => (
-                <div key={index} className="flex gap-5 items-center justify-center lg:justify-start">
+                <div key={index} className="flex gap-5 justify-start">
                   <span role="img" aria-label="icon">{feature.icon}</span>
                   <span className="text-gray-700">{feature.text}</span>
                 </div>

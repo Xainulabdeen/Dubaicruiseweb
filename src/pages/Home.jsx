@@ -7,7 +7,7 @@ import Hero from '../components/Hero'
 import ServicesSection from '../components/ServicesSection';
 import Service2 from '../components/Service2';
 import Price from '../components/Price'
-import Spincard from '../components/FlipsSection';
+import FlipsSection from '../components/FlipsSection';
 import ComboSection from '../components/ComboSection';
 import Sightseeingsection from '../components/Sightseeingsection';
 import Faqs from '../components/Faqs';
@@ -28,9 +28,9 @@ const Home = () => {
       price: 29,
       discountPrice: 55,
       features: [
-        { icon: '✔️', text: 'Instant Confirmation' },
-        { icon: '📱', text: 'Mobile e-Ticket' },
-        { icon: '⏳', text: '2-Hours Dinner Cruise' }
+        { icon: '✔️', text:'Instant Confirmation' },
+        { icon: '📱', text:'Mobile e-Ticket' },
+        { icon: '⏳', text:'2-Hours Dinner Cruise' }
       ]
     },
     {
@@ -46,9 +46,9 @@ const Home = () => {
       price: 39,
       discountPrice: 65,
       features: [
-        { icon: '✔️', text: 'Guaranteed Seating' },
-        { icon: '📱', text: 'Mobile e-Ticket' },
-        { icon: '⏳', text: '3-Hours Dinner Cruise' }
+        { icon: '✔️',text: 'Guaranteed Seating' },
+        { icon: '📱',text: 'Mobile e-Ticket' },
+        { icon: '⏳',text: '3-Hours Dinner Cruise' }
       ]
     },
     {
@@ -64,9 +64,9 @@ const Home = () => {
       price: 19,
       discountPrice: 35,
       features: [
-        { icon: '✔️', text: 'Sunset Views' },
-        { icon: '📱', text: 'Mobile e-Ticket' },
-        { icon: '⏳', text: '1-Hour Sunset Cruise' }
+        { icon: '✔️',text: 'Sunset Views' },
+        { icon: '📱',text: 'Mobile e-Ticket' },
+        { icon: '⏳',text: '1-Hour Sunset Cruise' }
       ]
     }
   ];
@@ -77,7 +77,7 @@ const Home = () => {
 <Hero/>
     <ServicesSection/>
     
-    <div className="flex flex-col  gap-5 ">
+    <div className="flex flex-col gap-5 ">
       {cruiseData.map((data, index) => (
         <Card key={index} {...data} />
       ))}
@@ -87,7 +87,7 @@ const Home = () => {
     <Service2/>
 
     <Price/>
-    <Spincard/>
+    <FlipsSection/>
     <ComboSection/>
     <Sightseeingsection/>
     <Faqs/> 
