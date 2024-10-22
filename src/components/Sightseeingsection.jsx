@@ -25,12 +25,12 @@ const Sightseeingsection = () => {
 
   return (
   <section className="flex flex-col self-center bg-orange-400 ">
-    <div className=' pt-10'>
+    <div className=' py-10'>
       <div className="items-center self-center">
-        <h1 className="text-white text-2xl text-center sm:text-3xl md:text-4xl lg:text-5xl title-font font-medium mb-4">
+        <h1 className="text-white text-2xl text-center sm:text-3xl md:text-4xl lg:text-5xl title-font font-medium my-4">
           Sightseeing on Dinner Cruises in UAE's Tourism Capital
         </h1>
-        <div className="flex justify-center m-5">
+        <div className="flex justify-center my-5">
           <p className="w-2/3 text-white text-center">
             Dubai Creek, Marina, and Canal each offer unique and distinct cruising experiences. Cruising around the Historic fish harbor in Creek, watching the luminous Skyscrapers in Marina, and experiencing the attractiveness of Downtown while on-boarding on the water canal cruise can give you a separate flavor of entertainment. We can’t precisely rate or compare any one of these cruises due to the unique vibe of each service.
           </p>
@@ -41,7 +41,7 @@ const Sightseeingsection = () => {
 
       <div className='grid lg:grid-cols-3 m-10 md:grid-cols-1 sm:grid-cols-1 gap-5'>
         {data.map((item, index) => (
-           <div key={index} className="mb-5 w-full max-w-xs md:max-w-sm lg:max-w-md bg-white p-5 rounded-2xl">
+           <div key={index} className="mb-5 w-full max-w-xs md:max-w-sm lg:max-w-md bg-white p-3 rounded-2xl">
             <div className='flex justify-center'>
               <img src={item.img} alt={item.title} className="w-full rounded-2xl h-auto" /> {/* Set image dimensions */}
             </div>

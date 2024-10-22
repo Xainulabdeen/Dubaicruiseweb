@@ -65,15 +65,15 @@ const Price = () => {
 
   return (
 
-    <section className="flex flex-col self-center overflow-hidden container mx-auto px-5 py-10">
+    <section className="flex flex-col self-center overflow-hidden container mx-auto px-5 py-5">
         {/* Header Section */}
-        <div className="text-center mb-8">
+        <div className="text-center">
 
-          <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium mb-4">
+          <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium ">
             Compare Which Dinner is Best For You?
           </h1>
-          <div className="flex justify-center">
-             <p className="w-2/3 text-sm sm:text-base lg:text-lg text-gray-600">
+          <div className="p-3 flex justify-center">
+             <p className="w-2/3 text-sm sm:text-base lg:text-lg text-gray-600 p-3">
             Dinner Cruises in Dubai operate from three locations. Each service
             has its own specialty. We can compare them based on price, location
             of cruising, ship type (wooden dhow / modern yacht), food menu,

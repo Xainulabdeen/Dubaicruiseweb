@@ -40,7 +40,7 @@ const ComboSection = () => {
         <h1 className="text-gray-900 text-2xl text-center sm:text-3xl md:text-4xl lg:text-5xl title-font font-medium ">
         Dubai Dhow Cruise Combo Packages
         </h1>
-        <div className="flex justify-center pt-5 pb-5">
+        <div className="flex justify-center my-5">
           <p className=" text-center lg: md:w-2/3 w-full">
           Save up to 40% when you Book Dhow Cruise Dubai with any other tour. We provide Desert Safari, Dubai City Tours, Waterparks tickets, Theme Parks tickets, Shopping tours, and much more. Also, you can avail of free pick and drop (hotel transfer) when booking a Marina cruise dinner with Desert Safari. You can select your own dates, time and even discuss with us to make a complete excursion plan for you. Our dedicated guest-care team will guide you through the process.
           </p>
@@ -72,12 +72,12 @@ const ComboSection = () => {
                   
                   {/* Responsive images */}
                   <div className="flex flex-row justify-center w-full mb-4"> {/* Stack images on small screens */}
-                    <img src={item.leftimg} alt="Left img" className="w-1/2 mx-2 mb-4 sm:mb-0" /> {/* Responsive left image */}
-                    <img src={item.rightimg} alt="Right img" className="w-1/2 mx-2" /> {/* Responsive right image */}
+                    <img src={item.leftimg} alt="Left img" className="w-1/2 m-2 " /> {/* Responsive left image */}
+                    <img src={item.rightimg} alt="Right img" className="w-1/2 m-2" /> {/* Responsive right image */}
                   </div>
                   
                   {/* Description */}
-                  <div className="w-full text-center px-4 md:px-6"> {/* Add padding for better readability */}
+                  <div className="w-full text-center py-4 md:px-6"> {/* Add padding for better readability */}
                     <h2 className="text-lg">{item.description}</h2> {/* Center the description */}
                   </div>
                 </div>

@@ -42,9 +42,9 @@ const IconSection = () => {
         <h1 className="text-gray-900 text-2xl text-center sm:text-3xl md:text-4xl lg:text-5xl title-font font-medium mb-4">
         Why to Choose DubaiCruise.com
           </h1>
-        <div className="flex justify-center m-5">
+        <div className="flex justify-center">
 
-        <p className="w-2/3 text-center">
+        <p className="w-2/3 text-center p-3">
             At DubaiCruise, we entertain our guests with utmost care. From booking confirmation to your last photograph on the ship, we handle your queries and requests professionally to make your trip memorable.
             </p>
         </div>

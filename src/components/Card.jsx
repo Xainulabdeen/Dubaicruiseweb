@@ -4,20 +4,20 @@ const CruiseCard = ({ imageSrc, title, subHeadings, content, price, discountPric
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="flex flex-col self-center overflow-hidden container mx-auto px-5 ">
+    <section className="flex flex-col self-center overflow-hidden container  px-5 ">
       <div className="border-2 rounded-2xl w-full bg-white flex flex-col lg:flex-row">
         {/* Left section - Image */}
-        <div className="w-full lg:w-1/3 p-4">
+        <div className="w-full lg:w-1/3">
           <img
             src={imageSrc}
             alt={title}
-            className="rounded-xl object-cover h-60 sm:h-72 md:h-80 lg:h-full w-full"
+            className="rounded-3xl object-cover h-60 sm:h-72 md:h-80 lg:h-full w-full p-2"
           />
         </div>
 
         {/* Middle section - Content */}
-        <div className="m-5 p-5 w-full lg:w-1/2 border-r-2">
-          <h2 className="text-xl md:text-2xl font-semibold mb-2">{title}</h2>
+        <div className=" w-full lg:w-1/2 border-r-2">
+          <h2 className="text-xl m-5 md:text-2xl font-semibold mb-2">{title}</h2>
           <div className="flex border-b overflow-x-scroll">
             {subHeadings.map((sub, index) => (
               <button
@@ -33,7 +33,7 @@ const CruiseCard = ({ imageSrc, title, subHeadings, content, price, discountPric
             ))}
           </div>
           <div className="mt-4">
-            <pre className="whitespace-pre-wrap">{content[activeTab]}</pre>
+            <pre className="whitespace-pre-wrap p-3">{content[activeTab]}</pre>
           </div>
         </div>
 

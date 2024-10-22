@@ -63,13 +63,13 @@ const Faqs = () => {
 
   return (
 
-    <section className="flex flex-col self-center overflow-hidden mt-10 mb-10">
-    <div className="text-center mb-8">
-      <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium mb-4">
+    <section className="flex flex-col self-center overflow-hidden my-10 ">
+    <div className="text-center my-8">
+      <h1 className="text-gray-900 p-3 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium ">
         General FAQ's Dhow Cruise Dubai
       </h1>
       <div className='flex justify-center'>
- <p className="w-2/3 text-sm sm:text-base lg:text-lg text-gray-600">
+ <p className="w-2/3 text-sm sm:text-base p-3 lg:text-lg text-gray-600">
         Selecting a specific Dhow Cruise Trip depends on a few factors which include price, location, food menu, and attractions, sightseeing (landmarks) of the excursion. Check below for details:
       </p>
       </div>
