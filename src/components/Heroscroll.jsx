@@ -40,9 +40,9 @@ const ProductCard = () => {
   };
 
   return (
-    <div className="product-card m-10">
-      <div className="rounded-2xl w-full">
-        <div className="relative overflow-hidden rounded-2xl w-full h-auto object-cover object-center">
+    <div className="justify-items-center ">
+      <div className="rounded-2xl w-full  ">
+        <div className="relative overflow-hidden rounded-2xl h-64 w-full object-cover object-end">
           <motion.div
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}

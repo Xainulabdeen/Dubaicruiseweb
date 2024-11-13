@@ -2,9 +2,9 @@ import React from 'react';
 
 const Blogpostcard = ({ id, image, title, description, btnlink }) => {
   return (
-    <div className="flex justify-center hover:group-[ease-in-out]:hover:ease-in-out hover:-translate-y-3 hover:shadow-lg transition-transform duration-300">
-      {id}
-      <div className="border-2 rounded-lg flex flex-col mb-6 sm:mb-0 max-w-sm">
+    <div className="flex justify-center hover:group-[ease-in-out]:hover:ease-in-out hover:-translate-y-3 transition-transform duration-300">
+  
+      <div className="border-2 rounded-lg flex flex-col mb-6 sm:mb-0 max-w-sm bg-white">
         <img
           src={image}
           alt={title} // Added alt text for better accessibility

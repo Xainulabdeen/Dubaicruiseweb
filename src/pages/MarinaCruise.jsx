@@ -183,7 +183,7 @@
    
    return (
     <>
-  <div className='flex flex-col sm:flex-col md:flex-col lg:flex-row'>
+  <div className='flex flex-col max-w-7xl justify-self-center sm:flex-col md:flex-col lg:flex-row'>
  
      
     <div className='w-full'>
@@ -378,7 +378,7 @@
  
   </div>
  
-  <div className=" sm:w-full md:w-full lg:w-1/3 lg:max-h-screen lg:sticky top-0 bottom-0 mb-32 self-start overflow-auto"> {/* Adjusted overflow and bottom */}
+  <div className=" sm:w-full md:w-full lg:w-1/3 lg:max-h-screen lg:sticky -top-10 bottom-0 mb-32 self-start overflow-y-scroll scrollbar-hide "> {/* Adjusted overflow and bottom */}
    {/* Content of Booktime */}
    <Booktime />
  </div>

@@ -62,44 +62,63 @@ const Faqs = () => {
   };
 
   return (
+    <div className="flex justify-center">
+      <section className="flex flex-col self-center overflow-hidden my-10">
+        <div className="max-w-7xl">
+          <div className="text-center my-8">
+            <h1 className="text-gray-900 p-3 text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-medium">
+              General FAQ's Dhow Cruise Dubai
+            </h1>
+            <div className="flex justify-center">
+              <p className="w-2/3 text-sm sm:text-base p-3 lg:text-lg text-gray-600">
+                Selecting a specific Dhow Cruise Trip depends on a few factors which include price, location,
+                food menu, and attractions, sightseeing (landmarks) of the excursion. Check below for details:
+              </p>
+            </div>
+          </div>
 
-    <section className="flex flex-col self-center overflow-hidden my-10 ">
-    <div className="text-center my-8">
-      <h1 className="text-gray-900 p-3 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium ">
-        General FAQ's Dhow Cruise Dubai
-      </h1>
-      <div className='flex justify-center'>
- <p className="w-2/3 text-sm sm:text-base p-3 lg:text-lg text-gray-600">
-        Selecting a specific Dhow Cruise Trip depends on a few factors which include price, location, food menu, and attractions, sightseeing (landmarks) of the excursion. Check below for details:
-      </p>
-      </div>
-     
-    </div>
-<div className='flex justify-center'>
-
-
-    <div className="grid lg:grid-cols-3 gap-5 md:grid-cols-1 sm:grid-cols-1 ">
-      {data.map((item, index) => (
-        <div key={index} className="mb-5 w-full max-w-xs md:max-w-sm lg:max-w-md ">
-          <h1 className="text-lg text-center md:text-xl font-semibold mb-4">{item.title}</h1>
-          <div className='border-2 rounded-md'>
-            {Array.from({ length: 6 }, (_, i) => (
-              <div key={i} className='border-b-2'>
-                <h2
-                  className="cursor-pointer p-5 text-md md:text-lg font-semibold"
-                  onClick={() => toggleAnswer(`${index}-q${i + 1}`)}
-                >
-                  {item[`question${i + 1}`]}
-                </h2>
-                {visibleAnswer === `${index}-q${i + 1}` && <p className="text-gray-600 p-5">{item[`answer${i + 1}`]}</p>}
-              </div>
-            ))}
+          <div className="flex justify-center">
+            <div className="grid lg:grid-cols-3 gap-5 md:grid-cols-1 sm:grid-cols-1">
+              {data.map((item, index) => (
+                <div key={index} className="mb-5 w-full max-w-xs md:max-w-sm lg:max-w-md">
+                  <h1 className="text-lg text-center md:text-xl font-semibold mb-4">{item.title}</h1>
+                  <div className="border-2 rounded-md">
+                    {Array.from({ length: 6 }, (_, i) => (
+                      <div key={i} className="border-b-2">
+                        <h2
+                          className="cursor-pointer p-5 text-md md:text-lg font-semibold flex justify-between items-center"
+                          onClick={() => toggleAnswer(`${index}-q${i + 1}`)}
+                        >
+                          <span>{item[`question${i + 1}`]}</span>
+                          {visibleAnswer === `${index}-q${i + 1}` ? (
+                            <button
+                              className="text-gray-500 font-bold"
+                              onClick={() => setVisibleAnswer(null)} // Close the answer
+                            >
+                              x
+                            </button>
+                          ) : (
+                            <button
+                              className="text-gray-500 font-bold"
+                              onClick={() => toggleAnswer(`${index}-q${i + 1}`)} // Open the answer
+                            >
+                              +
+                            </button>
+                          )}
+                        </h2>
+                        {visibleAnswer === `${index}-q${i + 1}` && (
+                          <p className="text-gray-600 p-5">{item[`answer${i + 1}`]}</p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      ))}
+      </section>
     </div>
-    </div>
-  </section>
   );
 };
 

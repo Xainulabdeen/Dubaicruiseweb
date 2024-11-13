@@ -24,10 +24,12 @@ const Sightseeingsection = () => {
   ];
 
   return (
-  <section className="flex flex-col self-center bg-orange-400 ">
-    <div className=' py-10'>
+    <div className="flex justify-center   bg-orange-400">
+    <div className="  bg-orange-400">
+  <section className="flex flex-col   bg-orange-400 self-center justify-center ">
+    <div className=' py-10 max-w-7xl'>
       <div className="items-center self-center">
-        <h1 className="text-white text-2xl text-center sm:text-3xl md:text-4xl lg:text-5xl title-font font-medium my-4">
+        <h1 className="text-white text-2xl text-center sm:text-3xl md:text-4xl lg:text-4xl title-font font-medium my-4">
           Sightseeing on Dinner Cruises in UAE's Tourism Capital
         </h1>
         <div className="flex justify-center my-5">
@@ -60,6 +62,8 @@ const Sightseeingsection = () => {
       </div>
     </div>
     </section >
+    </div>
+    </div>
   );
 };
 

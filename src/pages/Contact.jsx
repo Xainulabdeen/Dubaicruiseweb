@@ -7,7 +7,7 @@ import MapComponent from '../components/Map';
 
 function Contact() {
   return (
-    <div>
+    <div className='max-w-7xl justify-self-center'>
       {/* Contact Form with Image */}
       <ContactForm />
       

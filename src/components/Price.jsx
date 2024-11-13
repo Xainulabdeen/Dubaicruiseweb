@@ -64,12 +64,12 @@ const Price = () => {
   ];
 
   return (
-
-    <section className="flex flex-col self-center overflow-hidden container mx-auto px-5 py-5">
+<div className="">
+    <section className="flex flex-col max-w-7xl self-center overflow-hidden container mx-auto px-5 py-5 ">
         {/* Header Section */}
-        <div className="text-center">
+        <div className="text-center ">
 
-          <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium ">
+          <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-medium ">
             Compare Which Dinner is Best For You?
           </h1>
           <div className="p-3 flex justify-center">
@@ -84,7 +84,7 @@ const Price = () => {
         </div>
 
         {/* Responsive Price cards grid layout */}
-        <div className="items-center self-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5">
+        <div className="items-center self-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5 ">
           {data.map((item, index) => (
             <Pricecard
               key={index}
@@ -110,6 +110,7 @@ const Price = () => {
         </div>
       </section>
    
+</div>    
   );
 };
 

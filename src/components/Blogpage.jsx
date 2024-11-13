@@ -1,5 +1,6 @@
 import Heroscroll from "../components/Heroscroll";
 import React, { useState } from "react";
+import ShiponeImage from '../assets/Shipone.jpg';
 
 const Blogpage = ({
   title,
@@ -190,47 +191,79 @@ const Blogpage = ({
   const handleToggle3 = () => setShowAnswer3(!showAnswer3);
 
   return (
-    <section className="flex flex-col self-center overflow-hidden container  px-5 py-10 sm:px-10">
+    <section className="flex flex-col max-w-7xl container p-5 ">
       {/* section1 */}
-      <div className="flex mt-10 ">
-        <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl  lg:text-5xl title-font font-medium mb-4">
-          {title}
-        </h1>
-      </div>
-      <div>
-        <div className="overflow-hidden   py-5"> {subtitle}</div>
-      </div>
-      <div>
-        <div className="flex py-2 text-sm sm:text-lg px-1">{rating}</div>
-      </div>
-      <div>
-        <Heroscroll />
-      </div>
+      <div className="w-full">
+  {/* Container for small screens with background image and opacity */}
+  <div
+    className="bg-cover bg-center h-1/2 border-2 relative sm:block lg:hidden" // Visible on small screens only
+    style={{
+      backgroundImage: `url(${ShiponeImage})`, // Dynamically set background image
+    }}
+  >
+    {/* Background overlay for opacity on small screens */}
+    <div className="absolute inset-0 bg-white opacity-40"></div> {/* Only affects small screens */}
+
+    {/* Content that remains unaffected by the background image opacity */}
+    <div className="relative z-10 p-4">
+      <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-4xl title-font font-medium mb-4">
+        {title}
+      </h1>
+      <div className="overflow-hidden py-5">{subtitle}</div>
+      <div className="flex py-2 pb-8 text-sm sm:text-lg px-1">{rating}</div>
+    </div>
+  </div>
+
+  {/* Container for large screens (with background image hidden) */}
+  <div className="relative bg-cover bg-center h-1/2  hidden lg:block"
+   
+  >
+    {/* Content that remains unaffected by the background image */}
+    <div className="relative z-10 p-4">
+      <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-4xl title-font font-medium mb-4">
+        {title}
+      </h1>
+      <div className="overflow-hidden py-5">{subtitle}</div>
+      <div className="flex py-2 pb-8 text-sm sm:text-lg px-1">{rating}</div>
+    </div>
+  </div>
+
+  {/* Hero Component: Show only on large/medium screens */}
+  <div className="container hidden lg:block sm:hidden">
+    <div className="w-full pb-10">
+      <Heroscroll />
+    </div>
+  </div>
+</div>
+
+
+
+
       {/* section2 */}
-      <div className=" flex-wrap gap-5 justify-evenly grid lg:grid-cols-3 md:grid-cols-3 self-center">
+      <div className=" flex-wrap gap-10 py-10 justify-evenly grid lg:grid-cols-3 grid-cols-2 self-center">
         <div className="flex gap-5">
           <div className=" self-center">
-            <img src={logo1} alt="" srcset="" className="w-10" />
+            <img src={logo1} alt="" srcSet="" className="w-10" />
           </div>
           <div className="self-center">{logo1txt}</div>
         </div>
         <div className="flex gap-5">
           <div className=" self-center">
-            <img src={logo2} alt="" srcset="" className="w-10" />
+            <img src={logo2} alt="" srcSet="" className="w-10" />
           </div>
           <div className="self-center ">{logo2txt}</div>
         </div>
 
         <div className="flex gap-5">
           <div className=" self-center">
-            <img src={logo3} alt="" srcset="" className="w-10" />
+            <img src={logo3} alt="" srcSet="" className="w-10" />
           </div>
           <div className="self-center ">{logo3txt}</div>
         </div>
 
         <div className="flex gap-5">
           <div className=" self-center ">
-            <img src={logo4} alt="" srcset="" className="w-10" />
+            <img src={logo4} alt="" srcSet="" className="w-10" />
           </div>
 
           <div className="self-center ">{logo4txt}</div>
@@ -238,7 +271,7 @@ const Blogpage = ({
 
         <div className="flex gap-5">
           <div className="self-center">
-            <img src={logo5} alt="" srcset="" className="w-10" />
+            <img src={logo5} alt="" srcSet="" className="w-10" />
           </div>
 
           <div className="self-center">{logo5txt}</div>
@@ -246,11 +279,13 @@ const Blogpage = ({
 
         <div className="flex gap-5">
           <div className=" self-center">
-            <img src={logo6} alt="" srcset="" className="w-10" />
+            <img src={logo6} alt="" srcSet="" className="w-10" />
           </div>
           <div className="self-center">{logo6txt}</div>
         </div>
       </div>
+
+{/* section3 */}
           <div>
         <div className="flex  mt-10 ">
           <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl  lg:text-3xl title-font font-medium mb-4">
@@ -259,7 +294,7 @@ const Blogpage = ({
         </div>
         <div className="flex  ">{p1}</div>
       </div>
-     {/* //faqs */}
+     {/* //faqs  section 4*/}
       <div>
         <div className="flex mt-10">
           <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-3xl title-font font-medium mb-4">
@@ -312,8 +347,8 @@ const Blogpage = ({
           </h1>
         </div>
 
-        <div className="flex flex-col md:flex-col lg:flex-row">
-          {/* Image section */}
+        <div className="flex flex-col  md:flex-col lg:flex-row">
+          {/* Image section section5 */}
           <div className="lg:w-1/3 md:w-full mb-5 md:mb-0 flex justify-center">
             <img src={h3img} alt="" className="rounded-xl w-full" />
           </div>
@@ -325,41 +360,47 @@ const Blogpage = ({
         </div>
       </div>
     
-      {/* overview of dubai canal  */}
+      {/* overview of dubai canal  section6 */}
       <div className="   mt-10">
-        <div>
-          <div className="flex ">
+        <div className="">
+          <div className=" ">
             <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl  lg:text-3xl title-font font-medium mb-4">
               {h4}
             </h1>
           </div>
-          <div className=" ">{p4}</div>
-          <div className="flex lg:flex-row flex-wrap gap-5 m-5 justify-center">
-            <div className="flex self-center gap-5 p-5 border-2 rounded-lg ">
-              <div className="flex self-center ">
-                <img src={logo7} alt="" srcset="" className="w-10" />
+         <div className=" ">{p4}</div>
+            <div className="max-w-7xl justify-self-center p-5 ">
+            <div className="  grid lg:grid-rows-1 lg:grid-cols-4 grid-rows-1 grid-cols-2  gap-5">
+       
+             
+          <div className=" justify-items-center border-2 rounded-lg w-full px-5 gap-5">
+          <div className="justify-self-center">
+                <img src={logo7} alt="" srcSet="" className="full" />
               </div>
               <div className=" self-center">{logo7txt}</div>
             </div>
-            <div className="flex self-center gap-5 p-5 border-2 rounded-lg ">
-              <div className="flex self-center">
-                <img src={logo8} alt="" srcset="" className="w-10" />
+            <div className=" justify-items-center flex-1 border-2 rounded-lg w-full px-5 gap-5">
+            <div className="justify-self-center">
+                <img src={logo8} alt="" srcSet="" className="" />
               </div>
               <div className=" self-center">{logo8txt}</div>
             </div>
-            <div className="flex self-center gap-5 p-5 border-2 rounded-lg ">
-              <div className="flex self-center">
-                <img src={logo9} alt="" srcset="" className="w-10" />
+            <div className=" justify-items-center flex-1 border-2 rounded-lg w-full px-5 gap-5">
+            <div className="justify-self-center">
+                <img src={logo9} alt="" srcSet="" className="" />
               </div>
               <div className=" self-center">{logo9txt}</div>
             </div>
-            <div className="flex self-center gap-5 p-5 border-2 rounded-lg ">
-              <div className="flex self-center">
-                <img src={logo10} alt="" srcset="" className="w-10" />
+            <div className=" justify-items-center flex-1 border-2 rounded-lg w-full px-5 gap-5">
+              <div className="justify-self-center">
+                <img src={logo10} alt="" srcSet="" className="" />
               </div>
               <div className=" self-center">{logo10txt}</div>
             </div>
           </div>
+          </div>
+         
+
           <div>{logosub}</div>
         </div>
       </div>
@@ -422,7 +463,7 @@ const Blogpage = ({
             <div className="border-2 m-5 lg:w-1/3  ">
               <div className="  flex  p-5 ">
                 <div className=" self-center">
-                  <img src={subcard1icon} alt="" srcset="" />
+                  <img src={subcard1icon} alt="" srcSet="" />
                 </div>
                 <div className="self-center p-5 font-semibold text-2xl text-gray-500">
                   {subcard1title}
@@ -436,7 +477,7 @@ const Blogpage = ({
             <div className="border-2 m-5 lg:w-1/3">
               <div className="  flex p-5 ">
                 <div className=" self-center">
-                  <img src={subcard2icon} alt="" srcset="" />
+                  <img src={subcard2icon} alt="" srcSet="" />
                 </div>
                 <div className="self-center p-5 font-semibold text-2xl text-gray-500">
                   {subcard2title}
@@ -450,7 +491,7 @@ const Blogpage = ({
             <div className="border-2 m-5 md:w-full lg:w-1/3 ">
               <div className="  flex p-5 ">
                 <div className=" self-center">
-                  <img src={subcard3icon} alt="" srcset="" />
+                  <img src={subcard3icon} alt="" srcSet="" />
                 </div>
                 <div className="self-center p-5 font-semibold text-2xl text-gray-500">
                   {subcard3title}
@@ -590,117 +631,123 @@ const Blogpage = ({
   <div className="flex">{p9}</div>
 
   <div className="flex flex-wrap mt-10">
-  <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white ">
-      <div className="flex">
-        <div className="p-3">
-          <img src={b1} alt="" srcset="" />
-        </div>
-        <div className="self-center">{b1t}</div>
-      </div>
-      <div>{b1sub}</div>
+  <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white group transition-transform duration-300">
+  <div className="flex">
+    <div className="p-3">
+      <img 
+        src={b1} 
+        className="transition-all duration-300 group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:contrast-100" 
+        alt="" 
+        srcSet="" 
+      />
     </div>
-    <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white ">
+    <div className="self-center">{b1t}</div>
+  </div>
+  <div>{b1sub}</div>
+</div>
+
+<div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white group transition-transform duration-300">
       <div className="flex">
         <div className="p-3">
-          <img src={b2} alt="" srcset="" />
+          <img src={b2} alt=""  className="transition-all duration-300 group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:contrast-100"  srcSet="" />
         </div>
         <div className="self-center">{b2t}</div>
       </div>
       <div>{b2sub}</div>
     </div>
-    <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white ">
+    <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white group transition-transform duration-300">
       <div className="flex">
         <div className="p-3">
-          <img src={b3} alt="" srcset="" />
+          <img src={b3} alt=""  className="transition-all duration-300 group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:contrast-100"  srcSet="" />
         </div>
         <div className="self-center">{b3t}</div>
       </div>
       <div>{b3sub}</div>
     </div>
 
-    <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white ">
+    <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white group transition-transform duration-300">
       <div className="flex">
         <div className="p-3">
-          <img src={b4} alt="" srcset="" />
+          <img src={b4} alt=""  className="transition-all duration-300 group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:contrast-100"  srcSet="" />
         </div>
         <div className="self-center">{b4t}</div>
       </div>
       <div>{b4sub}</div>
     </div>
-    <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white ">
+    <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white group transition-transform duration-300">
       <div className="flex">
         <div className="p-3">
-          <img src={b5} alt="" srcset="" />
+          <img src={b5} alt=""  className="transition-all duration-300 group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:contrast-100"  srcSet="" />
         </div>
         <div className="self-center">{b5t}</div>
       </div>
       <div>{b5sub}</div>
     </div>
 
-    <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white ">
+    <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white group transition-transform duration-300">
       <div className="flex">
         <div className="p-3">
-          <img src={b6} alt="" srcset="" />
+          <img src={b6} alt=""  className="transition-all duration-300 group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:contrast-100"  srcSet="" />
         </div>
         <div className="self-center">{b6t}</div>
       </div>
       <div>{b6sub}</div>
     </div>
 
-    <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white ">
+    <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white group transition-transform duration-300">
       <div className="flex">
         <div className="p-3">
-          <img src={b7} alt="" srcset="" />
+          <img src={b7} alt=""  className="transition-all duration-300 group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:contrast-100"  srcSet="" />
         </div>
         <div className="self-center">{b7t}</div>
       </div>
       <div>{b7sub}</div>
     </div>
 
-    <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white ">
+    <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white group transition-transform duration-300">
       <div className="flex">
         <div className="p-3">
-          <img src={b8} alt="" srcset="" />
+          <img src={b8} alt=""  className="transition-all duration-300 group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:contrast-100"  srcSet="" />
         </div>
         <div className="self-center">{b8t}</div>
       </div>
       <div>{b8sub}</div>
     </div>
 
-    <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white ">
+    <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white group transition-transform duration-300">
       <div className="flex">
         <div className="p-3">
-          <img src={b9} alt="" srcset="" />
+          <img src={b9} alt=""  className="transition-all duration-300 group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:contrast-100"  srcSet="" />
         </div>
         <div className="self-center">{b9t}</div>
       </div>
       <div>{b9sub}</div>
     </div>
 
-    <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white ">
+    <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white group transition-transform duration-300">
       <div className="flex">
         <div className="p-3">
-          <img src={b10} alt="" srcset="" />
+          <img src={b10} alt=""  className="transition-all duration-300 group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:contrast-100"  srcSet="" />
         </div>
         <div className="self-center">{b10t}</div>
       </div>
       <div>{b10sub}</div>
     </div>
 
-    <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white ">
+    <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white group transition-transform duration-300">
       <div className="flex">
         <div className="p-3">
-          <img src={b11} alt="" srcset="" />
+          <img src={b11} alt=""  className="transition-all duration-300 group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:contrast-100"  srcSet="" />
         </div>
         <div className="self-center">{b11t}</div>
       </div>
       <div>{b11sub}</div>
     </div>
 
-    <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white ">
+    <div className="w-full border-2 sm:w-1/2 lg:w-1/4 p-5 hover:bg-orange-400 hover:text-white group transition-transform duration-300">
       <div className="flex">
         <div className="p-3">
-          <img src={b12} alt="" srcset="" />
+          <img src={b12} alt=""  className="transition-all duration-300 group-hover:filter group-hover:invert group-hover:brightness-0 group-hover:contrast-100"  srcSet="" />
         </div>
         <div className="self-center">{b12t}</div>
       </div>
@@ -709,7 +756,7 @@ const Blogpage = ({
   </div>
 </div>
 
-      sec12
+     
       <div className=" mt-10">
   <div>
     <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-3xl title-font font-medium mb-4">
@@ -743,7 +790,7 @@ const Blogpage = ({
   </div>
 </div>
 
-      sec13
+   
       <div className=" mt-10">
   <div className="flex">
     <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-3xl title-font font-medium mb-4">
@@ -798,7 +845,7 @@ const Blogpage = ({
   </div>
 </div>
 
-      sec14
+ 
       <div className=" mt-10">
   <div className="flex">
     <h1 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-3xl title-font font-medium mb-4">

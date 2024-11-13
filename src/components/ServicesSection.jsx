@@ -35,8 +35,9 @@ const IconSection = () => {
   ];
 
   return (
-    <section className="flex flex-col self-center overflow-hidden ">
-      <div className=" flex flex-wrap justify-center gap-20 pb-10">
+    <div className=" justify-self-center my-10">
+    <section className="overflow-hidden max-w-7xl">
+    <div className="justify-self-center grid  lg:grid-rows-1 lg:grid-cols-6 grid-rows-3 grid-cols-2 gap-16">
         {icons.map((icon, index) => (
           <div
             key={index}
@@ -59,6 +60,7 @@ const IconSection = () => {
         ))}
       </div>
     </section>
+    </div>
   );
 };
 

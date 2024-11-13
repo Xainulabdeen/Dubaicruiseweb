@@ -36,10 +36,11 @@ const IconSection = () => {
 
   return (
     
+    <div className="flex justify-center my-10">
+    <section className="flex flex-col self-center overflow-hidden max-w-7xl">
      
-   <section className="flex flex-col  self-center overflow-hidden mt-10 mb-10 gap-10">
-        <div className=" items-center self-center">
-        <h1 className="text-gray-900 text-2xl text-center sm:text-3xl md:text-4xl lg:text-5xl title-font font-medium mb-4">
+        <div className=" items-center self-center max-w-7xl ">
+        <h1 className="text-gray-900 text-2xl text-center sm:text-3xl md:text-4xl lg:text-4xl title-font font-medium mb-4">
         Why to Choose DubaiCruise.com
           </h1>
         <div className="flex justify-center">
@@ -49,7 +50,7 @@ const IconSection = () => {
             </p>
         </div>
             </div>
-            <div className=" flex flex-wrap justify-center gap-20 pb-10">
+            <div className="justify-self-center grid lg:grid-rows-1 lg:grid-cols-6 grid-rows-3 grid-cols-2 gap-5 ">
         {icons.map((icon, index) => (
           <div
             key={index}
@@ -71,7 +72,7 @@ const IconSection = () => {
           </div>
         ))}
       </div>
-    </section>
+    </section>   </div>
   );
 };
 

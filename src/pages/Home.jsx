@@ -11,7 +11,7 @@ import FlipsSection from '../components/FlipsSection';
 import ComboSection from '../components/ComboSection';
 import Sightseeingsection from '../components/Sightseeingsection';
 import Faqs from '../components/Faqs';
-import BlogScroll from '../components/BlogScroll';
+import Carousel from '../components/Carousel';
 import QuickLinks from '../components/QuickLinks';
 const Home = () => {
   const cruiseData = [
@@ -70,7 +70,38 @@ const Home = () => {
       ]
     }
   ];
+  const blogData = [
+    {
+      id: 1,
+      image: 'https://via.placeholder.com/400x200',
+      title: 'Blog Post 1',
+      description: 'This is a short description of the first blog post.',
+      btnlink: '#'
+    },
+    {
+      id: 2,
+      image: 'https://via.placeholder.com/400x200',
+      title: 'Blog Post 2',
+      description: 'This is a short description of the second blog post.',
+      btnlink: '#'
+    },   {
+      id: 1,
+      image: 'https://via.placeholder.com/400x200',
+      title: 'Blog Post 1',
+      description: 'This is a short description of the first blog post.',
+      btnlink: '#'
+    },
+    {
+      id: 2,
+      image: 'https://via.placeholder.com/400x200',
+      title: 'Blog Post 2',
+      description: 'This is a short description of the second blog post.',
+      btnlink: '#'
+    },
 
+
+    // Add more blog posts here
+  ];
   return (
     <>
 
@@ -91,8 +122,10 @@ const Home = () => {
     <ComboSection/>
     <Sightseeingsection/>
     <Faqs/> 
-   <BlogScroll/>
+    <Carousel cardsData={blogData} />
     <QuickLinks/>
+
+
 
   
    

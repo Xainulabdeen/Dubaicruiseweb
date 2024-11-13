@@ -1,3 +1,8 @@
+
+
+
+
+
 import React from 'react'
 import Blogpage from '../components/Blogpage';
 import logo1 from '../assets/logo1.png'
@@ -15,7 +20,7 @@ import Booktime from '../components/Booktime'
 
 
 
-const CreekCruise = () => {
+const  MarinaCruise = () => {
   const data = [{
     title: "Exploring the Waterways in Dubai Canal Cruise",                // Title
     subtitle: "Enjoy the Ultimate Crushing Experience Around Highest Skyscrapers",   // Subtitle
@@ -178,7 +183,7 @@ const CreekCruise = () => {
   
   return (
    <>
- <div className='flex flex-col sm:flex-col md:flex-col lg:flex-row'>
+ <div className='flex flex-col max-w-7xl justify-self-center sm:flex-col md:flex-col lg:flex-row'>
 
     
    <div className='w-full'>
@@ -373,7 +378,7 @@ const CreekCruise = () => {
 
  </div>
 
- <div className=" sm:w-full md:w-full lg:w-1/3 lg:max-h-screen lg:sticky -top-10  mb-32 self-start "> {/* Adjusted overflow and bottom */}
+ <div className=" sm:w-full md:w-full lg:w-1/3 lg:max-h-screen lg:sticky -top-10 bottom-0 mb-32 self-start overflow-y-scroll scrollbar-hide "> {/* Adjusted overflow and bottom */}
   {/* Content of Booktime */}
   <Booktime />
 </div>
@@ -385,4 +390,4 @@ const CreekCruise = () => {
   )
 }
 
-export default CreekCruise;
+export default  MarinaCruise;

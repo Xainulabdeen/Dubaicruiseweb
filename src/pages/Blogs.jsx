@@ -62,7 +62,7 @@ const Blogs = ({pagetitle}) => {
   },
 ]
   return (
-    <section className="flex flex-col self-center overflow-hidden container mx-auto px-5 py-10">
+    <section className="flex flex-col  justify-self-center overflow-hidden container max-w-7xl px-5 py-10">
 <div className='flex justify-center text-4xl font-semibold p-10'>
   <h1>{pagetitle}</h1>
 </div>

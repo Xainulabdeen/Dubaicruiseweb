@@ -11,7 +11,7 @@ const CruiseBooking = () => {
   };
 
   return (
-    <div className="flex flex-col  sticky gap-3 self-center overflow-hidden container   p-5">
+    <div className="flex flex-col  sticky gap-3 justify-self-center container   p-5 ">
       {/* Form Section */}
       <div className="w-full  bg-white pt-3 mt-3 p-6 rounded-lg border-2">
         <h2 className="text-xl font-bold mb-4">AED 29 <span className="line-through text-gray-500">AED 55</span></h2>
@@ -51,7 +51,7 @@ const CruiseBooking = () => {
           />
           {!date && <p className="text-red-500 mb-4">This field is required.</p>}
 
-          <button type="submit" className="w-full bg-blue-600 text-white p-2 rounded-lg">
+          <button type="submit" className="w-full  bg-orange-500  py-2 px-5  text-white p-2 rounded-lg">
           <a href="/booking"> Book Now</a>
           </button>
         </form>

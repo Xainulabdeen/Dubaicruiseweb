@@ -35,9 +35,10 @@ const ComboSection = () => {
   const [visibleIndex, setVisibleIndex] = useState(null);
 
   return (
-    <div className="flex flex-col items-center gap-5 m-5 "> 
-    <div className="items-center self-center ">
-        <h1 className="text-gray-900 text-2xl text-center sm:text-3xl md:text-4xl lg:text-5xl title-font font-medium ">
+    <div className=" flex justify-center">
+    <div className="flex flex-col items-center gap-5 m-5 max-w-7xl"> 
+    <div className="items-center self-center  ">
+        <h1 className="text-gray-900 text-2xl text-center sm:text-3xl md:text-4xl lg:text-4xl title-font font-medium ">
         Dubai Dhow Cruise Combo Packages
         </h1>
         <div className="flex justify-center my-5">
@@ -54,7 +55,7 @@ const ComboSection = () => {
             <div key={index} className=" gap-5 w-full"> {/* Full width on small screens */}
               <button
                 onClick={() => setVisibleIndex(visibleIndex === index ? null : index)}
-                className="font-bold text-sm lg:text-xl md:text-xl  text-gray-700 active:text-orange-400 text-center "
+                className="font-bold text-sm lg:text-xl md:text-xl  text-gray-700 active:text-orange-400 justify-self-center "
               >
                 {item.icon}
                 {item.heading}
@@ -86,6 +87,7 @@ const ComboSection = () => {
           )
         ))}
       </div>
+    </div>
     </div>
   );
 };

@@ -46,9 +46,10 @@ const FlipsSection = () => {
   ];
 
   return (
-    <div className='my-10'>
+    <div className=" flex justify-center">
+    <div className='my-10 max-w-7xl'>
       <div className="items-center self-center">
-        <h1 className="text-gray-900 text-2xl text-center sm:text-3xl md:text-4xl lg:text-5xl title-font font-medium my-4">
+        <h1 className="text-gray-900 text-2xl text-center sm:text-3xl md:text-4xl lg:text-4xl title-font font-medium my-4">
           Quick Info for Booking Dhow Cruise
         </h1>
         <div className="flex justify-center my-5">
@@ -75,6 +76,7 @@ const FlipsSection = () => {
       </div>
       </div>
       
+    </div>
     </div>
   );
 };

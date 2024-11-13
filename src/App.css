@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  max-width: 7px; 
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -39,4 +41,20 @@
 
 .read-the-docs {
   color: #888;
+}
+
+
+/* styles.css or your Tailwind's custom CSS file */
+.bg-opacity-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('src/assets/Shipone.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6; /* Apply opacity to the background */
+  z-index: -1; /* Send the pseudo-element behind the content */
 }

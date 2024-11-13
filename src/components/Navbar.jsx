@@ -6,8 +6,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow">
-      <div className="container mx-auto p-4 md:p-6">
+    <nav className="bg-white  ">
+      <div className="container mx-auto max-w-7xl  p-4 md:p-6">
         <div className="flex justify-between items-center">
           {/* Logo aligned to the left, wrapped in a Link to go to the home page */}
           <Link to="/">

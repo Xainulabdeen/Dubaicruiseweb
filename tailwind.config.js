@@ -5,7 +5,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      
+      width: {
+        '3/4': '75%',
+      },
+      backgroundImage: {
+        'shipone': "url('src/assets/Shipone.jpg')",
+      },
+    }
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide'),
+  ],
 }

@@ -7,9 +7,9 @@ import Logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
-
-    <div className="flex justify-center bg-black p-4  ">
-    <div className='bg-black text-white flex flex-col items-center  self-center'>
+    <div className="  bg-black justify-items-center ">
+    <div className="max-w-7xl justify-self-center">
+    <div className='bg-black text-white flex justify-self-center flex-col items-center  self-center'>
       <div className="p-8 flex flex-col lg:flex-row justify-between self-center items-start w-full">
         {/* Subscription Section */}
         <div className="lg:w-1/3 w-full mb-8 lg:mb-0 flex flex-col self-center items-start">
@@ -75,6 +75,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
     </div>
   );

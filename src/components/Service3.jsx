@@ -28,7 +28,7 @@ const IconSection = () => {
   return (
     <section className="flex flex-col self-center overflow-hidden container mx-auto px-5 py-10 bg-orange-400">
        
-      <div className="container mx-auto flex flex-wrap justify-center gap-32 ">
+      <div className="container mx-auto flex flex-wrap justify-center gap-32 max-w-7xl  ">
         {icons.map((icon, index) => (
           <div
             key={index}

@@ -86,7 +86,7 @@ const Booking = () => {
 
           <button
             onClick={handleNext}
-            className="bg-orange-500 text-white p-2 w-full sm:w-auto rounded-md"
+            className="bg-orange-500 text-white py-3 px-6 rounded-md"
           >
             Next
           </button>
@@ -163,7 +163,7 @@ const Booking = () => {
 
           <button
             type="submit"
-            className="bg-orange-500 text-white p-2 w-full sm:w-auto rounded-md"
+            className="bg-orange-500 text-white py-4 px-5 rounded-md"
           >
             Book this Tour
           </button>
